@@ -1,4 +1,10 @@
 file = open('Map.txt')
-SIZE = int(file.readline())
-MAP = [[int(x) for x in file.readline().split()] for i in range(SIZE)]
+MAP = []
+for line in file:
+    a = [int(x) for x in line.split()]
+    # print(*a)
+    MAP.append(a)
+SIZE_X = len(MAP[0])
+SIZE_Y = len(MAP)
+# print(SIZE_X,SIZE_Y)
 file.close()
