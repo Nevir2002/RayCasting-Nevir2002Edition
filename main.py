@@ -1,6 +1,6 @@
 import pygame,sys
 import Person
-import Map
+import Map #contains MAP, SIZE_X, SIZE_Y
 
 def draw_background():
     SCREEN.fill(BACKGROUND_COLOR)
@@ -32,10 +32,11 @@ VIEW_COLOR = (255,0,0)
 RAY_COLOR = (30,200,200)
 WALL_COLOR = (255,255,255)
 
+# draw screen and set controller keys
 pygame.init()
 SCREEN = pygame.display.set_mode((SCREEN_X,SCREEN_Y))
 pygame.display.set_caption("Ray-casting by Nevir2002")
-p = Person.Person(x=250,y=250,size=20,person_color=PLAYER_COLOR,view_color=VIEW_COLOR,ray_color=RAY_COLOR,r=50,map=MAP,map_size_x=SIZE_X,map_size_y=SIZE_Y,cell_size_x=CELL_X,cell_size_y=CELL_Y)
+p = Person.Person(x=250,y=250,size=20,person_color=PLAYER_COLOR,view_color=VIEW_COLOR,ray_color=RAY_COLOR,r=30,map=MAP,map_size_x=SIZE_X,map_size_y=SIZE_Y,cell_size_x=CELL_X,cell_size_y=CELL_Y)
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

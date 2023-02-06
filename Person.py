@@ -16,8 +16,8 @@ class Person():
         self.map_size_y = map_size_y
         self.cell_size_x = cell_size_x
         self.cell_size_y = cell_size_y
-        self.dalpha = 1*ONE_DEGREE        #turning speed
-        self.dp = 1.0                     #moving speed
+        self.dalpha = 1.5*ONE_DEGREE        #turning speed
+        self.dp = 5.0                     #moving speed
         self.cell_list = []
         for i in range(self.map_size_y):
             for j in range(self.map_size_x):
